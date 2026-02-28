@@ -1,0 +1,102 @@
+/* ============================= */
+/* SEÇÃO DO VASO */
+/* ============================= */
+
+.vaso-section {
+    text-align: center;
+    margin: 80px auto;
+    max-width: 1000px;
+    padding: 40px 20px;
+}
+
+.vaso-section h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2em;
+    color: #5a3d1e;
+    margin-bottom: 40px;
+}
+
+/* Container principal */
+.vaso-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vaso */
+.vaso {
+    font-size: 140px;
+    z-index: 2;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+/* Palavras */
+.palavra {
+    position: absolute;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.palavra:hover {
+    transform: scale(1.1);
+}
+
+/* Cores */
+.negativa {
+    color: #b23a3a;
+}
+
+.positiva {
+    color: #2e7d32;
+}
+
+/* Distribuição em círculo */
+.p1 { top: 0; left: 50%; transform: translateX(-50%); }
+.p2 { top: 50%; left: 0; transform: translateY(-50%); }
+.p3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+
+.p4 { top: 50%; right: 0; transform: translateY(-50%); }
+.p5 { top: 15%; right: 10%; }
+.p6 { bottom: 15%; left: 10%; }
+
+/* Pergunta final */
+.pergunta {
+    margin-top: 60px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.6em;
+    color: #5a3d1e;
+    font-weight: bold;
+}
+
+/* Animação leve do vaso */
+@keyframes flutuar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .vaso-container {
+        width: 260px;
+        height: 260px;
+    }
+
+    .vaso {
+        font-size: 110px;
+    }
+
+    .palavra {
+        font-size: 0.9em;
+    }
+
+    .pergunta {
+        font-size: 1.2em;
+    }
+}
