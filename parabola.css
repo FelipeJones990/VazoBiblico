@@ -92,39 +92,49 @@ body {
 /* Parte de cima */
 .p1 { 
     top: -10px; 
-    left: 50%; 
-    transform: translateX(-50%);
+    left: 35%; 
+    
 }
 
 /* Esquerda superior */
 .p2 { 
-    top: 80px; 
+    top: 60px; 
     left: -40px; 
 }
 
 /* Esquerda inferior */
 .p3 { 
-    bottom: 40px; 
+    
+    bottom: 174px; 
     left: -30px; 
+}
+
+.p31 {
+  bottom: 50px;  
 }
 
 /* Direita superior */
 .p4 { 
-    top: 80px; 
-    right: -40px; 
+    top: 50px; 
+    right: -10px; 
 }
 
 /* Direita central */
 .p5 { 
-    top: 170px; 
+    top: 180px; 
     right: -60px; 
+}
+
+.p52 {
+    top: 310px;
+    left: 350px;
 }
 
 /* Parte de baixo */
 .p6 { 
     bottom: -10px; 
-    left: 50%; 
-    transform: translateX(-50%);
+    left: 37%;
+    
 }
 /* Status */
 .status {
@@ -162,4 +172,37 @@ button:hover {
     max-width: 600px;
     margin: 20px auto;
     font-size: 1.1em;
+}
+
+/* ========================= */
+/* SISTEMA DE DANO DO VASO  */
+/* ========================= */
+
+.vaso {
+    transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+}
+
+/* Pequena rachadura */
+.vaso.dano1 {
+    filter: drop-shadow(0 0 5px #b23a3a);
+    transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+/* Rachaduras médias */
+.vaso.dano2 {
+    filter: drop-shadow(0 0 8px #8b0000);
+    transform: translate(-50%, -50%) rotate(3deg) scale(0.98);
+}
+
+/* Quase quebrando */
+.vaso.dano3 {
+    filter: drop-shadow(0 0 12px red);
+    transform: translate(-50%, -50%) rotate(-6deg) scale(0.95);
+}
+
+/* Quebrado */
+.vaso.quebrado {
+    filter: grayscale(100%) brightness(0.8);
+    transform: translate(-50%, -50%) rotate(8deg) scale(0.9);
+    opacity: 0.6;
 }
