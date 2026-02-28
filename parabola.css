@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #fdf8ef, #e8dcc8);
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.8em;
+    color: #5a3d1e;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #7a5630;
+}
+
+/* CARD PRINCIPAL */
+.vaso-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Container */
+.vaso-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 40px auto;
+}
+
+/* Vaso */
+.vaso {
+    font-size: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Interior animado */
+.interior {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 0;
+    background: rgba(46,125,50,0.6);
+    border-radius: 0 0 40px 40px;
+    transition: height 0.5s ease;
+}
+
+/* Palavras */
+.palavra {
+    position: absolute;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.palavra:hover {
+    transform: scale(1.15);
+}
+
+.negativa {
+    background: #ffe5e5;
+    color: #b23a3a;
+}
+
+.positiva {
+    background: #e6f5e6;
+    color: #2e7d32;
+}
+
+/* Distribuição Circular Organizada */
+
+/* Parte de cima */
+.p1 { 
+    top: -10px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+/* Esquerda superior */
+.p2 { 
+    top: 80px; 
+    left: -40px; 
+}
+
+/* Esquerda inferior */
+.p3 { 
+    bottom: 40px; 
+    left: -30px; 
+}
+
+/* Direita superior */
+.p4 { 
+    top: 80px; 
+    right: -40px; 
+}
+
+/* Direita central */
+.p5 { 
+    top: 170px; 
+    right: -60px; 
+}
+
+/* Parte de baixo */
+.p6 { 
+    bottom: -10px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+/* Status */
+.status {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Botão */
+button {
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    background: #5a3d1e;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7a5630;
+}
+
+/* Reflexão */
+.reflexao {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.reflexao h2 {
+    font-family: 'Merriweather', serif;
+    color: #5a3d1e;
+}
+
+.reflexao p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.1em;
+}
