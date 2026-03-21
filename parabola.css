@@ -296,6 +296,7 @@ button:hover {
     .p6 { bottom: -10px; left: 35%; }
 
     .status {
+        top: 100px;
         font-size: 1em;
         text-align: center;
     }
