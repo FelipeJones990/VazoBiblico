@@ -288,7 +288,8 @@ button:hover {
     /* ✅ CORREÇÃO DO PERDÃO (AGORA FUNCIONA) */
    .p52 {
     top: 150px;
-    right: 0px;
+    left: 85%;
+    transform: translate(-50%);
 }
 
     .p6 { bottom: -10px; left: 35%; }
