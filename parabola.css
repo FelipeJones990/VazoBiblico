@@ -1,7 +1,10 @@
 body {
+    background-image: url(imagem/037dfec7-2321-4c31-abd6-a87668ca8a11.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(135deg, #fdf8ef, #e8dcc8);
     color: #333;
 }
 
@@ -205,4 +208,104 @@ button:hover {
     filter: grayscale(100%) brightness(0.8);
     transform: translate(-50%, -50%) rotate(8deg) scale(0.9);
     opacity: 0.6;
+}
+
+.botao {
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      padding: 15px 35px;
+      font-size: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, #7a5630, #5a3d1e);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .botao:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(135deg, #5a3d1e, #8b0000);
+    }
+
+    .botao:active {
+      transform: scale(0.98);
+    }
+
+    /* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 1.6em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .vaso-container {
+        width: 280px;
+        height: 280px;
+        margin: auto;
+    }
+
+    .vaso {
+        font-size: 100px;
+    }
+
+    .interior {
+        width: 50px;
+        bottom: 50px;
+    }
+
+    .palavra {
+        font-size: 0.7em;
+        padding: 5px 8px;
+    }
+
+    /* POSIÇÕES AJUSTADAS */
+    .p1 { top: -10px; left: 35%; }
+
+    .p2 { top: 50px; left: -20px; }
+
+    .p3 { bottom: 100px; left: -15px; }
+
+    .p31 { bottom: 10px; left: 10px; }
+
+    .p4 { top: 30px; right: -5px; }
+
+    .p5 { top: 120px; right: -25px; }
+
+    .p52 { top: 200px; right: 10px; }
+
+    .p6 { bottom: -10px; left: 35%; }
+
+    .status {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .botao {
+        position: static;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .reflexao {
+        padding: 20px;
+        text-align: center;
+    }
 }

@@ -1,159 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo de Jovens - Parábola do Semeador</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <title>Parábola do Semeador</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Open Sans', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-image: url(./imagem/foto1.jpg);
-            background-size: cover;
-            background-position: center;
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-image: url(./imagem/foto1.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-        .container {
-            background: white;
-            max-width: 850px;
-            padding: 60px 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            text-align: center;
-            animation: fadeIn 1.2s ease;
-            position: relative;
-        }
+    .container {
+      background: rgba(255,255,255,0.95);
+      max-width: 850px;
+      width: 100%;
+      padding: 60px 50px;
+      border-radius: 20px;
+      text-align: center;
+    }
 
-        .container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 5px;
-            background: linear-gradient(to right, #5a3d1e, #c5a46d);
-            border-radius: 10px;
-        }
+    h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #5a3d1e;
+    }
 
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 3em;
-            color: #5a3d1e;
-            margin-bottom: 10px;
-        }
+    h2 {
+      margin-top: 30px;
+      color: #5a3d1e;
+    }
 
-        h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.8em;
-            color: #a27c4f;
-            margin-bottom: 30px;
-        }
+    p {
+      font-size: 1.1em;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        p {
-            font-size: 1.15em;
-            line-height: 1.8;
-            color: #444;
-            margin-bottom: 20px;
-        }
+    button {
+      margin-top: 25px;
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background: #5a3d1e;
+      color: white;
+      cursor: pointer;
+    }
 
-        .highlight {
-            font-weight: 600;
-            color: #5a3d1e;
-        }
+    button:hover {
+      background: #7a5630;
+    }
 
-        button {
-            background: linear-gradient(45deg, #5a3d1e, #8b5e34);
-            color: rgb(245, 0, 0);
-            border: none;
-            padding: 15px 35px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: 0.3s ease;
-            margin-top: 30px;
-            box-shadow: 0 10px 20px rgba(90,61,30,0.3);
-        }
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
 
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(90,61,30,0.4);
-        }
+      .container {
+        padding: 30px 20px;
+      }
 
-        footer {
-            margin-top: 40px;
-        }
+      h1 {
+        font-size: 1.8em;
+      }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      h2 {
+        font-size: 1.3em;
+      }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 20px;
-            }
+      p {
+        font-size: 1em;
+      }
 
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-        }
-    </style>
+      button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>🌿 Grupo de Jovens</h1>
-        <h2>A Parábola do Semeador</h2>
+  <div class="container">
+    <h1>🌱 Parábola do Semeador</h1>
 
-        <p>
-            Entre os ensinamentos de Jesus, uma das histórias mais profundas é a
-            <span class="highlight">Parábola do Semeador</span>.
-        </p>
+    <p>""
+      Jesus contou uma parábola sobre um semeador que espalhava sementes.
+      Cada semente caía em um tipo de solo diferente, representando o coração das pessoas.
+    </p>
 
-        <p>
-            Nela, aprendemos que a semente representa a Palavra,
-            e o solo representa o coração de cada um de nós.
-        </p>
+    <h2>🌾 Os 4 tipos de solo</h2>
 
-        <p>
-            Nesta jornada, queremos refletir sobre qual tipo de solo estamos sendo
-            e como podemos nos tornar <span class="highlight">boa terra</span>,
-            produzindo frutos que glorifiquem a Deus.
-        </p>
+    <p>
+      🪨 <b>Solo pedregoso:</b> recebe a palavra com alegria, mas não tem raiz.<br><br>
+      🌵 <b>Solo com espinhos:</b> as preocupações sufocam a palavra.<br><br>
+      🛣️ <b>Solo à beira do caminho:</b> a palavra é roubada.<br><br>
+      🌿 <b>Boa terra:</b> produz frutos abundantes.
+    </p>
 
-        <footer>
-            <button onclick="window.location.href='parabola.html'">
-                🌱 Entrar na Parábola
-            </button>
-        </footer>
-    </div>
+    <p>
+      Assim como o solo, nosso coração pode escolher o que absorver.
+    </p>
+
+    <button onclick="window.location.href='parabola.html'">
+      Ir para experiência do vaso 🏺
+    </button>
+
+  </div>
 
 </body>
 </html>

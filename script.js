@@ -2,45 +2,51 @@ let nivel = 0;
 let boas = 0;
 let ruins = 0;
 
-let dano = 0; // controle de rachadura
+let dano = 0;
 const danoMax = 4;
 
 const vaso = document.getElementById("vaso");
 const interior = document.getElementById("interior");
 
 document.querySelectorAll(".palavra").forEach(p => {
-    p.addEventListener("click", function() {
 
-        if (this.classList.contains("positiva")) {
-            nivel += 15;
-            boas++;
+    p.addEventListener("click", interagir);
+    p.addEventListener("touchstart", interagir);
 
-            interior.style.background = "rgba(46,125,50,0.6)";
-
-            // cura rachadura
-            if (dano > 0) dano--;
-
-        } else {
-            nivel -= 10;
-            ruins++;
-
-            interior.style.background = "rgba(178,58,58,0.6)";
-
-            // aumenta rachadura
-            if (dano < danoMax) dano++;
-        }
-
-        if (nivel < 0) nivel = 0;
-        if (nivel > 120) nivel = 120;
-
-        interior.style.height = nivel + "px";
-
-        this.style.display = "none";
-
-        atualizarDano();
-        atualizarStatus();
-    });
 });
+
+function interagir(e) {
+
+    e.preventDefault();
+
+    if (this.style.display === "none") return;
+
+    if (this.classList.contains("positiva")) {
+        nivel += 15;
+        boas++;
+
+        interior.style.background = "rgba(46,125,50,0.6)";
+
+        if (dano > 0) dano--;
+
+    } else {
+        nivel -= 10;
+        ruins++;
+
+        interior.style.background = "rgba(178,58,58,0.6)";
+
+        if (dano < danoMax) dano++;
+    }
+
+    nivel = Math.max(0, Math.min(120, nivel));
+
+    interior.style.height = nivel + "px";
+
+    this.style.display = "none";
+
+    atualizarDano();
+    atualizarStatus();
+}
 
 function atualizarDano() {
     vaso.className = "vaso";
@@ -58,16 +64,16 @@ function atualizarStatus() {
         status.textContent = "Seu vaso está vazio.";
     } 
     else if (dano >= 4) {
-        status.textContent = "💥 O vaso quebrou! Cuidado com o que você permite entrar.";
+        status.textContent = "💥 O vaso quebrou!";
     }
     else if (boas > ruins) {
         status.textContent = "🌿 Seu vaso está sendo fortalecido!";
     } 
     else if (ruins > boas) {
-        status.textContent = "⚠️ Seu vaso está sendo influenciado negativamente.";
+        status.textContent = "⚠️ Influência negativa.";
     } 
     else {
-        status.textContent = "⚖️ Seu vaso está contaminado.";
+        status.textContent = "⚖️ Em equilíbrio.";
     }
 }
 
