@@ -129,8 +129,9 @@ body {
 }
 
 .p52 {
-    top: 310px;
-    left: 350px;
+    top: 150px;
+    left: 85%;
+    transform: translate(-50%);
 }
 
 /* Parte de baixo */
