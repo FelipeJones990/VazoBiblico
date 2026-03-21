@@ -286,10 +286,10 @@ button:hover {
     .p5 { top: 120px; right: -25px; }
 
     /* ✅ CORREÇÃO DO PERDÃO (AGORA FUNCIONA) */
-    .p52 {
-        bottom: 30px;
-        right: -10px;
-    }
+   .p52 {
+    top: 150px;
+    right: 0px;
+}
 
     .p6 { bottom: -10px; left: 35%; }
 
